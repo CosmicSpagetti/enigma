@@ -1,3 +1,6 @@
 class Enigma
 
-end 
+  def encrypt(message, key, date)
+
+  end
+end
