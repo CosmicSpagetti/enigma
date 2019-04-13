@@ -28,22 +28,31 @@
         1,
         null,
         1,
-        4,
-        4,
+        0,
+        0,
         null,
         null,
         1,
-        5,
-        5,
-        5,
-        5,
-        5,
-        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/billyurrutia/Turing/1module/Projects/enigma/lib/offset.rb": [
+        1,
+        1,
+        1,
+        4,
         null,
         null,
         null
       ]
     },
-    "timestamp": 1555127909
+    "timestamp": 1555179238
   }
 }
