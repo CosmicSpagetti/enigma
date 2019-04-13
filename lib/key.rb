@@ -3,7 +3,7 @@ class Key
 
   def initialize(key = rand.to_s[2..6])
     @key = key
-    @split_key = split_key
+    @split_key_hash = split_key
   end
 
   def split_key

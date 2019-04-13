@@ -20,7 +20,14 @@ class OffsetTest < Minitest::Test
     assert_equal "130419", offset.date
   end
 
-  def test_can_create_offset_from_date
+  def test_can_square_date_and_get_last_4_digits
+    offset = Offset.new("040895")
+
+    assert_equal "1025", offset.offset_number
+  end
+
+
+  def test_can_create_offset_keys
     offset = Offset.new("040895")
     expected = {
       a_offset: 1,
@@ -28,6 +35,6 @@ class OffsetTest < Minitest::Test
       c_offset: 2,
       d_offset: 5
     }
-    assert_equal expected, offset.create_offset 
+    assert_equal expected, offset.create_offset
   end
 end
