@@ -13,11 +13,11 @@ class KeyTest < Minitest::Test
     assert_equal "02715", key.key
   end
 
-  # def test_can_get_5_digit_key_random_key
-  #   key = Key.new
-  #
-  #
-  # end
+  def test_can_get_5_digit_key_random_key
+    key = Key.new
+
+    assert_equal 5, key.key.length
+  end
 
 
 end
