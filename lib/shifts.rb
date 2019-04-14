@@ -32,9 +32,21 @@ class Shifts
         char.tr(@alphabet.to_s, @alphabet.rotate(@final_values[:D]).to_s)
       end
     end.join
-
   end
 
-
+ def deshifter(message)
+   message.downcase.chars.map.with_index do |char, index|
+     next char unless @alphabet.include?(char)
+     if index == 0 || index % 4 == 0
+       char.tr(@alphabet.to_s, @alphabet.rotate(-(@final_values[:A])).to_s)
+     elsif index % 4 == 1
+       char.tr(@alphabet.to_s, @alphabet.rotate(-(@final_values[:B])).to_s)
+     elsif index % 4 == 2
+       char.tr(@alphabet.to_s, @alphabet.rotate(-(@final_values[:C])).to_s)
+     elsif index % 4 == 3
+       char.tr(@alphabet.to_s, @alphabet.rotate(-(@final_values[:D])).to_s)
+     end
+   end.join
+ end
 
 end
