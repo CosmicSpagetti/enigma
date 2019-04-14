@@ -12,7 +12,7 @@ class Enigma
   def decrypt(message, key = Key.new, date = Offset.new)
     shifts = Shifts.new(key, date)
     decrypt_hash = {
-      encryption:shifts.shifter(message) ,
+      encryption:shifts.deshifter(message) ,
       key: shifts.key.key ,
       date: shifts.date.date
     }
