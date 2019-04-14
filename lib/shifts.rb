@@ -1,7 +1,8 @@
 class Shifts
   attr_reader :key,
               :date,
-              :alphabet
+              :alphabet,
+              :final_values
   def initialize(key = Key.new, date = Offset.new)
     @key = key.class == String ? Key.new(key) : key
     @date = date.class == String ? Offset.new(date) : date
