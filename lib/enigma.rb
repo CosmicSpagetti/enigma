@@ -1,14 +1,21 @@
 class Enigma
 
-  def encrypt(message, key=nil, date = nil)
+  def encrypt(message, key = Key.new, date = Offset.new)
     shifts = Shifts.new(key, date)
-    hash = {
+    encrypt_hash = {
       encryption:shifts.shifter(message) ,
       key: shifts.key.key ,
       date: shifts.date.date
     }
-    hash
   end
 
+  def decrypt(message, key = Key.new, date = Offset.new)
+    shifts = Shifts.new(key, date)
+    decrypt_hash = {
+      encryption:shifts.deshifter(message) ,
+      key: shifts.key.key ,
+      date: shifts.date.date
+    }
+  end
 
 end

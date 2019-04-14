@@ -38,10 +38,16 @@ class ShiftsTest < Minitest::Test
     assert_equal expected, shifts.final_shifts
   end
 
-  def test_can_apply_shifts_to_phrase
+  def test_can_encrypt_messages
     shifts = Shifts.new("02715", "040895")
 
     assert_equal "keder ohulw!", shifts.shifter("Hello World!")
+  end
+
+  def test_can_decrypt_messages
+    shifts = Shifts.new("02715", "040895")
+
+    assert_equal "hello world!", shifts.deshifter("keder ohulw!")
   end
 
 
