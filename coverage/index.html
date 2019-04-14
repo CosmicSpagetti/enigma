@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-04-14T11:05:09-06:00">2019-04-14T11:05:09-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-04-14T11:16:39-06:00">2019-04-14T11:16:39-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">97.65%</span></span>
+    (<span class="covered_percent"><span class="green">100.0%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         10.73
+         3.04
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>7</b> files in total.
-    <b>85</b> relevant lines. 
-    <span class="green"><b>83</b> lines covered</span> and
-    <span class="red"><b>2</b> lines missed </span>
+    <b>94</b> relevant lines. 
+    <span class="green"><b>94</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -67,7 +67,7 @@
         <td>12</td>
         <td>12</td>
         <td>0</td>
-        <td>25.5</td>
+        <td>6.2</td>
       </tr>
       
       <tr>
@@ -77,17 +77,17 @@
         <td>14</td>
         <td>14</td>
         <td>0</td>
-        <td>34.6</td>
+        <td>9.8</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#340ff2f8f662f2395018a402754e4b0d3e67d9e2" class="src_link" title="lib/shifts.rb">lib/shifts.rb</a></td>
-        <td class="red strong">75.0 %</td>
+        <td class="green strong">100.0 %</td>
         <td>18</td>
-        <td>8</td>
-        <td>6</td>
-        <td>2</td>
-        <td>8.8</td>
+        <td>12</td>
+        <td>12</td>
+        <td>0</td>
+        <td>1.5</td>
       </tr>
       
       <tr>
@@ -114,8 +114,8 @@
         <td class="strong"><a href="#05abdae3327450bc3393a3a0dc04a15b3ab1da1a" class="src_link" title="test/shifts_test.rb">test/shifts_test.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>38</td>
-        <td>14</td>
-        <td>14</td>
+        <td>19</td>
+        <td>19</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -319,14 +319,14 @@
           <code class="ruby">  def initialize(key = rand.to_s[2..6])</code>
         </li>
       
-        <li class="covered" data-hits="37" data-linenumber="6">
-          <span class="hits">37</span>
+        <li class="covered" data-hits="8" data-linenumber="6">
+          <span class="hits">8</span>
           
           <code class="ruby">    @key = key</code>
         </li>
       
-        <li class="covered" data-hits="37" data-linenumber="7">
-          <span class="hits">37</span>
+        <li class="covered" data-hits="8" data-linenumber="7">
+          <span class="hits">8</span>
           
           <code class="ruby">    @key_hash = split_key</code>
         </li>
@@ -349,38 +349,38 @@
           <code class="ruby">  def split_key</code>
         </li>
       
-        <li class="covered" data-hits="38" data-linenumber="11">
-          <span class="hits">38</span>
+        <li class="covered" data-hits="9" data-linenumber="11">
+          <span class="hits">9</span>
           
           <code class="ruby">    split_key_hash = {}</code>
         </li>
       
-        <li class="covered" data-hits="38" data-linenumber="12">
-          <span class="hits">38</span>
+        <li class="covered" data-hits="9" data-linenumber="12">
+          <span class="hits">9</span>
           
           <code class="ruby">    split_key_hash[:a_key] = key.scan(/\d/)[0,2].join.to_i</code>
         </li>
       
-        <li class="covered" data-hits="38" data-linenumber="13">
-          <span class="hits">38</span>
+        <li class="covered" data-hits="9" data-linenumber="13">
+          <span class="hits">9</span>
           
           <code class="ruby">    split_key_hash[:b_key] = key.scan(/\d/)[1,2].join.to_i</code>
         </li>
       
-        <li class="covered" data-hits="38" data-linenumber="14">
-          <span class="hits">38</span>
+        <li class="covered" data-hits="9" data-linenumber="14">
+          <span class="hits">9</span>
           
           <code class="ruby">    split_key_hash[:c_key] = key.scan(/\d/)[2,2].join.to_i</code>
         </li>
       
-        <li class="covered" data-hits="38" data-linenumber="15">
-          <span class="hits">38</span>
+        <li class="covered" data-hits="9" data-linenumber="15">
+          <span class="hits">9</span>
           
           <code class="ruby">    split_key_hash[:d_key] = key.scan(/\d/)[3,2].join.to_i</code>
         </li>
       
-        <li class="covered" data-hits="38" data-linenumber="16">
-          <span class="hits">38</span>
+        <li class="covered" data-hits="9" data-linenumber="16">
+          <span class="hits">9</span>
           
           <code class="ruby">    split_key_hash</code>
         </li>
@@ -446,14 +446,14 @@
           <code class="ruby">  def initialize(date = Time.now.strftime(&quot;%d%m%y&quot;))</code>
         </li>
       
-        <li class="covered" data-hits="39" data-linenumber="5">
-          <span class="hits">39</span>
+        <li class="covered" data-hits="10" data-linenumber="5">
+          <span class="hits">10</span>
           
           <code class="ruby">    @date = date</code>
         </li>
       
-        <li class="covered" data-hits="39" data-linenumber="6">
-          <span class="hits">39</span>
+        <li class="covered" data-hits="10" data-linenumber="6">
+          <span class="hits">10</span>
           
           <code class="ruby">    @offset = create_offset</code>
         </li>
@@ -476,8 +476,8 @@
           <code class="ruby">  def offset_number</code>
         </li>
       
-        <li class="covered" data-hits="162" data-linenumber="10">
-          <span class="hits">162</span>
+        <li class="covered" data-hits="46" data-linenumber="10">
+          <span class="hits">46</span>
           
           <code class="ruby">    (@date.to_i ** 2).to_s.chars.last(4).join</code>
         </li>
@@ -500,38 +500,38 @@
           <code class="ruby">  def create_offset</code>
         </li>
       
-        <li class="covered" data-hits="40" data-linenumber="14">
-          <span class="hits">40</span>
+        <li class="covered" data-hits="11" data-linenumber="14">
+          <span class="hits">11</span>
           
           <code class="ruby">    offset_hash = {}</code>
         </li>
       
-        <li class="covered" data-hits="40" data-linenumber="15">
-          <span class="hits">40</span>
+        <li class="covered" data-hits="11" data-linenumber="15">
+          <span class="hits">11</span>
           
           <code class="ruby">    offset_hash[:a_offset] = offset_number[0].to_i</code>
         </li>
       
-        <li class="covered" data-hits="40" data-linenumber="16">
-          <span class="hits">40</span>
+        <li class="covered" data-hits="11" data-linenumber="16">
+          <span class="hits">11</span>
           
           <code class="ruby">    offset_hash[:b_offset] = offset_number[1].to_i</code>
         </li>
       
-        <li class="covered" data-hits="40" data-linenumber="17">
-          <span class="hits">40</span>
+        <li class="covered" data-hits="11" data-linenumber="17">
+          <span class="hits">11</span>
           
           <code class="ruby">    offset_hash[:c_offset] = offset_number[2].to_i</code>
         </li>
       
-        <li class="covered" data-hits="40" data-linenumber="18">
-          <span class="hits">40</span>
+        <li class="covered" data-hits="11" data-linenumber="18">
+          <span class="hits">11</span>
           
           <code class="ruby">    offset_hash[:d_offset] = offset_number[3].to_i</code>
         </li>
       
-        <li class="covered" data-hits="40" data-linenumber="19">
-          <span class="hits">40</span>
+        <li class="covered" data-hits="11" data-linenumber="19">
+          <span class="hits">11</span>
           
           <code class="ruby">    offset_hash</code>
         </li>
@@ -562,11 +562,11 @@
         <div class="source_table" id="340ff2f8f662f2395018a402754e4b0d3e67d9e2">
   <div class="header">
     <h3>lib/shifts.rb</h3>
-    <h4><span class="red">75.0 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>8</b> relevant lines. 
-      <span class="green"><b>6</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <b>12</b> relevant lines. 
+      <span class="green"><b>12</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -597,14 +597,14 @@
           <code class="ruby">  def initialize(key = Key.new, date = Offset.new)</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="5">
-          <span class="hits">33</span>
+        <li class="covered" data-hits="4" data-linenumber="5">
+          <span class="hits">4</span>
           
           <code class="ruby">    @key = key.class == String ? Key.new(key) : key</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="6">
-          <span class="hits">33</span>
+        <li class="covered" data-hits="4" data-linenumber="6">
+          <span class="hits">4</span>
           
           <code class="ruby">    @date = date.class == String ? Offset.new(date) : date</code>
         </li>
@@ -624,41 +624,41 @@
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">  def final_shifts(key, date)</code>
+          <code class="ruby">  def final_shifts</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="10">
-          
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
           
           <code class="ruby">    final_hash = {}</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    final_hash[:A] =</code>
+          <code class="ruby">    final_hash[:A] = @key.key_hash[:a_key] + @date.offset[:a_offset]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    final_hash[:B] =</code>
+          <code class="ruby">    final_hash[:B] = @key.key_hash[:b_key] + @date.offset[:b_offset]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    final_hash[:C] =</code>
+          <code class="ruby">    final_hash[:C] = @key.key_hash[:c_key] + @date.offset[:c_offset]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    final_hash[:D] =</code>
+          <code class="ruby">    final_hash[:D] = @key.key_hash[:d_key] + @date.offset[:d_offset]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
-          
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
           
           <code class="ruby">    final_hash</code>
         </li>
@@ -1034,7 +1034,7 @@
         <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
-          <code class="ruby">    assert_equal &quot;130419&quot;, offset.date</code>
+          <code class="ruby">    assert_equal &quot;140419&quot;, offset.date</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
@@ -1197,8 +1197,8 @@
     <h3>test/shifts_test.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>14</b> relevant lines. 
-      <span class="green"><b>14</b> lines covered</span> and
+      <b>19</b> relevant lines. 
+      <span class="green"><b>19</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1239,109 +1239,109 @@
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">    binding.pry</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
-          
           <code class="ruby">    shifts = Shifts.new(&quot;02715&quot;, &quot;040895&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
+        <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
           <code class="ruby">    assert_instance_of Shifts, shifts</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="12">
+        <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
           <code class="ruby">  def test_it_has_attributes</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="13">
+        <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
           <code class="ruby">    shifts = Shifts.new(&quot;02715&quot;, &quot;040895&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
+        <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
           <code class="ruby">    assert_instance_of Key, shifts.key</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
+        <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
           <code class="ruby">    assert_instance_of Offset, shifts.date</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
+        <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
           <code class="ruby">    assert_equal &quot;02715&quot;, shifts.key.key</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
+        <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
           <code class="ruby">    assert_equal &quot;040895&quot;, shifts.date.date</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="18">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="20">
+        <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
           <code class="ruby">  def test_it_can_have_random_key_and_todays_date_with_no_input</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="21">
+        <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
           <code class="ruby">    shifts = Shifts.new</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
           
+          <code class="ruby">    assert_instance_of Key, shifts.key</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
           
-          <code class="ruby"></code>
+          <code class="ruby">    assert_instance_of Offset, shifts.date</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="24">
@@ -1362,70 +1362,70 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  # def test_can_get_final_shifts</code>
+          <code class="ruby">  def test_can_get_final_shifts</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  #   shifts = Shifts.new</code>
+          <code class="ruby">    shifts = Shifts.new(&quot;02715&quot;, &quot;040895&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  #   key =</code>
+          <code class="ruby">    key =</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="30">
           
           
-          <code class="ruby">  #   expected = {</code>
+          <code class="ruby">    expected = {</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="31">
           
           
-          <code class="ruby">  #     A: 3,</code>
+          <code class="ruby">      A: 3,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="32">
           
           
-          <code class="ruby">  #     B: 27,</code>
+          <code class="ruby">      B: 27,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
           
           
-          <code class="ruby">  #     C: 73,</code>
+          <code class="ruby">      C: 73,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="34">
           
           
-          <code class="ruby">  #     D: 20</code>
+          <code class="ruby">      D: 20</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="35">
           
           
-          <code class="ruby">  #   }</code>
+          <code class="ruby">    }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="36">
+        <li class="covered" data-hits="1" data-linenumber="36">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  #   assert_equal expected, shifts.final_shifts(key, date)</code>
+          <code class="ruby">    assert_equal expected, shifts.final_shifts</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="37">
           
           
-          <code class="ruby">  # end</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="38">
