@@ -10,18 +10,19 @@ class ShiftsTest < Minitest::Test
   def test_it_has_attributes
     shifts = Shifts.new("02715", "040895")
 
-    assert_instance_of Key, shifts.key
-    assert_instance_of Offset, shifts.date
-    assert_equal "02715", shifts.key.key
-    assert_equal "040895", shifts.date.date
+    assert_instance_of Key, shifts.key_instance
+    assert_instance_of Offset, shifts.date_instance
+    assert_equal "02715", shifts.key_instance.key
+    assert_equal "040895", shifts.date_instance.date
     assert_equal 27, shifts.alphabet.count
   end
 
   def test_it_can_have_random_key_and_todays_date_with_no_input
     shifts = Shifts.new
 
-    assert_instance_of Key, shifts.key
-    assert_instance_of Offset, shifts.date
+    assert_instance_of Key, shifts.key_instance
+    assert_instance_of Offset, shifts.date_instance
+    assert_equal "150419", shifts.date_instance.date
   end
 
 
@@ -51,6 +52,6 @@ class ShiftsTest < Minitest::Test
     assert_equal 20, shifts.current_key
     assert_equal 3, shifts.current_key
   end
-  
+
 
 end
