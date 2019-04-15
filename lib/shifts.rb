@@ -11,41 +11,33 @@ class Shifts
   end
 
   def final_shifts
-    final_hash = {}
-    final_hash[:A] = @key.key_hash[:a_key] + @date.offset[:a_offset]
-    final_hash[:B] = @key.key_hash[:b_key] + @date.offset[:b_offset]
-    final_hash[:C] = @key.key_hash[:c_key] + @date.offset[:c_offset]
-    final_hash[:D] = @key.key_hash[:d_key] + @date.offset[:d_offset]
+    final_hash = []
+    final_hash << @key.key_hash[:a_key] + @date.offset[:a_offset]
+    final_hash << @key.key_hash[:b_key] + @date.offset[:b_offset]
+    final_hash << @key.key_hash[:c_key] + @date.offset[:c_offset]
+    final_hash << @key.key_hash[:d_key] + @date.offset[:d_offset]
     final_hash
   end
 
+  def current_key
+    key = @final_values.first
+    @final_values.rotate!
+    key
+  end
+
   def shifter(message)
-    message.downcase.chars.map.with_index do |char, index|
+    message.downcase.chars.map do |char|
       next char unless @alphabet.include?(char)
-      if index == 0 || index % 4 == 0
-        char.tr(@alphabet.to_s, @alphabet.rotate(@final_values[:A]).to_s)
-      elsif index % 4 == 1
-        char.tr(@alphabet.to_s, @alphabet.rotate(@final_values[:B]).to_s)
-      elsif index % 4 == 2
-        char.tr(@alphabet.to_s, @alphabet.rotate(@final_values[:C]).to_s)
-      elsif index % 4 == 3
-        char.tr(@alphabet.to_s, @alphabet.rotate(@final_values[:D]).to_s)
-      end
+      @alphabet.rotate! until @alphabet.first == char
+      @alphabet.rotate!(current_key).first
     end.join
   end
 
  def deshifter(message)
-   message.downcase.chars.map.with_index do |char, index|
+   message.downcase.chars.map do |char|
      next char unless @alphabet.include?(char)
-     if index == 0 || index % 4 == 0
-       char.tr(@alphabet.to_s, @alphabet.rotate(-(@final_values[:A])).to_s)
-     elsif index % 4 == 1
-       char.tr(@alphabet.to_s, @alphabet.rotate(-(@final_values[:B])).to_s)
-     elsif index % 4 == 2
-       char.tr(@alphabet.to_s, @alphabet.rotate(-(@final_values[:C])).to_s)
-     elsif index % 4 == 3
-       char.tr(@alphabet.to_s, @alphabet.rotate(-(@final_values[:D])).to_s)
-     end
+     @alphabet.rotate! until @alphabet.first == char
+     @alphabet.rotate!(-current_key).first
    end.join
  end
 

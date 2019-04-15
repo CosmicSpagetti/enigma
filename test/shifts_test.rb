@@ -4,7 +4,6 @@ class ShiftsTest < Minitest::Test
 
   def test_it_exists
     shifts = Shifts.new("02715", "040895")
-
     assert_instance_of Shifts, shifts
   end
 
@@ -28,19 +27,12 @@ class ShiftsTest < Minitest::Test
 
   def test_can_get_final_shifts
     shifts = Shifts.new("02715", "040895")
-    key =
-    expected = {
-      A: 3,
-      B: 27,
-      C: 73,
-      D: 20
-    }
+    expected = [3,27,73,20]
     assert_equal expected, shifts.final_shifts
   end
 
   def test_can_encrypt_messages
     shifts = Shifts.new("02715", "040895")
-
     assert_equal "keder ohulw!", shifts.shifter("Hello World!")
   end
 
@@ -50,6 +42,15 @@ class ShiftsTest < Minitest::Test
     assert_equal "hello world!", shifts.deshifter("keder ohulw!")
   end
 
+  def test_can_rotate_key
+    shifts = Shifts.new("02715", "040895")
+
+    assert_equal 3, shifts.current_key
+    assert_equal 27, shifts.current_key
+    assert_equal 73, shifts.current_key
+    assert_equal 20, shifts.current_key
+    assert_equal 3, shifts.current_key
+  end
 
 
 end
