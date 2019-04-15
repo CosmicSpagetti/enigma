@@ -1,6 +1,6 @@
 class Shifts
-  attr_reader :key,
-              :date,
+  attr_reader :key_instance,
+              :date_instance,
               :alphabet,
               :final_values
   def initialize(key = Key.new, date = Offset.new)
@@ -12,10 +12,10 @@ class Shifts
 
   def final_shifts
     final = []
-    final << @key.key_hash[:a_key] + @date.offset[:a_offset]
-    final << @key.key_hash[:b_key] + @date.offset[:b_offset]
-    final << @key.key_hash[:c_key] + @date.offset[:c_offset]
-    final << @key.key_hash[:d_key] + @date.offset[:d_offset]
+    final << @key_instance.key_hash[:a_key] + @date_instance.offset[:a_offset]
+    final << @key_instance.key_hash[:b_key] + @date_instance.offset[:b_offset]
+    final << @key_instance.key_hash[:c_key] + @date_instance.offset[:c_offset]
+    final << @key_instance.key_hash[:d_key] + @date_instance.offset[:d_offset]
     final
   end
 
