@@ -1,1 +1,3 @@
-andrew is playing the division 2
+in module 1, students will learn to use ruby and object-oriented programming to build software. they will develop skills to write automated tests, pseudocode, write implementation code, and refactor code to meet ruby conventions. through several large group
+projects and regular pairing exercises, students will learn skills and procedures for 
+effectively collaborating and pairing with other developers.

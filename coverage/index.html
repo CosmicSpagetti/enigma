@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-04-14T21:34:53-06:00">2019-04-14T21:34:53-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-04-15T15:54:15-06:00">2019-04-15T15:54:15-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         8.24
+         7543.24
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>7</b> files in total.
-    <b>130</b> relevant lines. 
-    <span class="green"><b>130</b> lines covered</span> and
+    <b>140</b> relevant lines. 
+    <span class="green"><b>140</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -53,11 +53,11 @@
       <tr>
         <td class="strong"><a href="#a6dfaa4fa7bd79f8351c6ab240fc3be892bdda04" class="src_link" title="lib/enigma.rb">lib/enigma.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>21</td>
-        <td>7</td>
-        <td>7</td>
+        <td>34</td>
+        <td>17</td>
+        <td>17</td>
         <td>0</td>
-        <td>1.9</td>
+        <td>2932.3</td>
       </tr>
       
       <tr>
@@ -67,7 +67,7 @@
         <td>12</td>
         <td>12</td>
         <td>0</td>
-        <td>11.5</td>
+        <td>5549.5</td>
       </tr>
       
       <tr>
@@ -77,7 +77,7 @@
         <td>14</td>
         <td>14</td>
         <td>0</td>
-        <td>16.6</td>
+        <td>7136.9</td>
       </tr>
       
       <tr>
@@ -87,7 +87,7 @@
         <td>28</td>
         <td>28</td>
         <td>0</td>
-        <td>22.1</td>
+        <td>29986.6</td>
       </tr>
       
       <tr>
@@ -141,8 +141,8 @@
     <h3>lib/enigma.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>7</b> relevant lines. 
-      <span class="green"><b>7</b> lines covered</span> and
+      <b>17</b> relevant lines. 
+      <span class="green"><b>17</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -168,14 +168,14 @@
           <code class="ruby">  def encrypt(message, key = Key.new, date = Offset.new)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="4">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="4">
+          <span class="hits">4</span>
           
           <code class="ruby">    shifts = Shifts.new(key, date)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="5">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="5">
+          <span class="hits">4</span>
           
           <code class="ruby">    encrypt_hash = {</code>
         </li>
@@ -222,14 +222,14 @@
           <code class="ruby">  def decrypt(message, key = Key.new, date = Offset.new)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="13">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="8308" data-linenumber="13">
+          <span class="hits">8308</span>
           
           <code class="ruby">    shifts = Shifts.new(key, date)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="14">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="8308" data-linenumber="14">
+          <span class="hits">8308</span>
           
           <code class="ruby">    decrypt_hash = {</code>
         </li>
@@ -237,7 +237,7 @@
         <li class="never" data-hits="" data-linenumber="15">
           
           
-          <code class="ruby">      encryption:shifts.deshifter(message) ,</code>
+          <code class="ruby">      decryption:shifts.deshifter(message) ,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
@@ -270,7 +270,85 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def crack(message, date = Offset.new)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    key = 10000000</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    key_format = key.to_s[-5..-1]</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    cracked_message = decrypt(message, key_format, date)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    until cracked_message[:decryption][-4..-1] == &quot; end&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="8304" data-linenumber="26">
+          <span class="hits">8304</span>
+          
+          <code class="ruby">      key += 1</code>
+        </li>
+      
+        <li class="covered" data-hits="8304" data-linenumber="27">
+          <span class="hits">8304</span>
+          
+          <code class="ruby">      key_format = key.to_s[-5..-1]</code>
+        </li>
+      
+        <li class="covered" data-hits="8304" data-linenumber="28">
+          <span class="hits">8304</span>
+          
+          <code class="ruby">      cracked_message = decrypt(message, key_format, date)</code>
+        </li>
+      
+        <li class="covered" data-hits="8304" data-linenumber="29">
+          <span class="hits">8304</span>
+          
+          <code class="ruby">      break if key_format == &quot;99999&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    decrypt(message, key_format, date)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
           
           
           <code class="ruby">end</code>
@@ -325,14 +403,14 @@
           <code class="ruby">  def initialize(key = rand.to_s[2..6])</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="6">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="8323" data-linenumber="6">
+          <span class="hits">8323</span>
           
           <code class="ruby">    @key = key</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="7">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="8323" data-linenumber="7">
+          <span class="hits">8323</span>
           
           <code class="ruby">    @key_hash = split_key</code>
         </li>
@@ -355,38 +433,38 @@
           <code class="ruby">  def split_key</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="11">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="8324" data-linenumber="11">
+          <span class="hits">8324</span>
           
           <code class="ruby">    split_key_hash = {}</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="12">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="8324" data-linenumber="12">
+          <span class="hits">8324</span>
           
           <code class="ruby">    split_key_hash[:a_key] = key.scan(/\d/)[0,2].join.to_i</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="13">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="8324" data-linenumber="13">
+          <span class="hits">8324</span>
           
           <code class="ruby">    split_key_hash[:b_key] = key.scan(/\d/)[1,2].join.to_i</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="14">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="8324" data-linenumber="14">
+          <span class="hits">8324</span>
           
           <code class="ruby">    split_key_hash[:c_key] = key.scan(/\d/)[2,2].join.to_i</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="15">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="8324" data-linenumber="15">
+          <span class="hits">8324</span>
           
           <code class="ruby">    split_key_hash[:d_key] = key.scan(/\d/)[3,2].join.to_i</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="16">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="8324" data-linenumber="16">
+          <span class="hits">8324</span>
           
           <code class="ruby">    split_key_hash</code>
         </li>
@@ -452,14 +530,14 @@
           <code class="ruby">  def initialize(date = Time.now.strftime(&quot;%d%m%y&quot;))</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="5">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="8325" data-linenumber="5">
+          <span class="hits">8325</span>
           
           <code class="ruby">    @date = date</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="6">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="8325" data-linenumber="6">
+          <span class="hits">8325</span>
           
           <code class="ruby">    @offset = create_offset</code>
         </li>
@@ -482,8 +560,8 @@
           <code class="ruby">  def offset_number</code>
         </li>
       
-        <li class="covered" data-hits="78" data-linenumber="10">
-          <span class="hits">78</span>
+        <li class="covered" data-hits="33306" data-linenumber="10">
+          <span class="hits">33306</span>
           
           <code class="ruby">    (@date.to_i ** 2).to_s.chars.last(4).join</code>
         </li>
@@ -506,38 +584,38 @@
           <code class="ruby">  def create_offset</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="14">
-          <span class="hits">19</span>
+        <li class="covered" data-hits="8326" data-linenumber="14">
+          <span class="hits">8326</span>
           
           <code class="ruby">    offset_hash = {}</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="15">
-          <span class="hits">19</span>
+        <li class="covered" data-hits="8326" data-linenumber="15">
+          <span class="hits">8326</span>
           
           <code class="ruby">    offset_hash[:a_offset] = offset_number[0].to_i</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="16">
-          <span class="hits">19</span>
+        <li class="covered" data-hits="8326" data-linenumber="16">
+          <span class="hits">8326</span>
           
           <code class="ruby">    offset_hash[:b_offset] = offset_number[1].to_i</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="17">
-          <span class="hits">19</span>
+        <li class="covered" data-hits="8326" data-linenumber="17">
+          <span class="hits">8326</span>
           
           <code class="ruby">    offset_hash[:c_offset] = offset_number[2].to_i</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="18">
-          <span class="hits">19</span>
+        <li class="covered" data-hits="8326" data-linenumber="18">
+          <span class="hits">8326</span>
           
           <code class="ruby">    offset_hash[:d_offset] = offset_number[3].to_i</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="19">
-          <span class="hits">19</span>
+        <li class="covered" data-hits="8326" data-linenumber="19">
+          <span class="hits">8326</span>
           
           <code class="ruby">    offset_hash</code>
         </li>
@@ -615,26 +693,26 @@
           <code class="ruby">  def initialize(key = Key.new, date = Offset.new)</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="7">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="8319" data-linenumber="7">
+          <span class="hits">8319</span>
           
           <code class="ruby">    @key = key.class == String ? Key.new(key) : key</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="8">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="8319" data-linenumber="8">
+          <span class="hits">8319</span>
           
           <code class="ruby">    @date = date.class == String ? Offset.new(date) : date</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="9">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="8319" data-linenumber="9">
+          <span class="hits">8319</span>
           
           <code class="ruby">    @alphabet = (&quot;a&quot;..&quot;z&quot;).to_a &lt;&lt; &quot; &quot;</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="10">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="8319" data-linenumber="10">
+          <span class="hits">8319</span>
           
           <code class="ruby">    @final_values = final_shifts</code>
         </li>
@@ -657,40 +735,40 @@
           <code class="ruby">  def final_shifts</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="14">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="8320" data-linenumber="14">
+          <span class="hits">8320</span>
           
-          <code class="ruby">    final_hash = []</code>
+          <code class="ruby">    final = []</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="15">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="8320" data-linenumber="15">
+          <span class="hits">8320</span>
           
-          <code class="ruby">    final_hash &lt;&lt; @key.key_hash[:a_key] + @date.offset[:a_offset]</code>
+          <code class="ruby">    final &lt;&lt; @key.key_hash[:a_key] + @date.offset[:a_offset]</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="16">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="8320" data-linenumber="16">
+          <span class="hits">8320</span>
           
-          <code class="ruby">    final_hash &lt;&lt; @key.key_hash[:b_key] + @date.offset[:b_offset]</code>
+          <code class="ruby">    final &lt;&lt; @key.key_hash[:b_key] + @date.offset[:b_offset]</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="17">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="8320" data-linenumber="17">
+          <span class="hits">8320</span>
           
-          <code class="ruby">    final_hash &lt;&lt; @key.key_hash[:c_key] + @date.offset[:c_offset]</code>
+          <code class="ruby">    final &lt;&lt; @key.key_hash[:c_key] + @date.offset[:c_offset]</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="18">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="8320" data-linenumber="18">
+          <span class="hits">8320</span>
           
-          <code class="ruby">    final_hash &lt;&lt; @key.key_hash[:d_key] + @date.offset[:d_offset]</code>
+          <code class="ruby">    final &lt;&lt; @key.key_hash[:d_key] + @date.offset[:d_offset]</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="19">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="8320" data-linenumber="19">
+          <span class="hits">8320</span>
           
-          <code class="ruby">    final_hash</code>
+          <code class="ruby">    final</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="20">
@@ -711,20 +789,20 @@
           <code class="ruby">  def current_key</code>
         </li>
       
-        <li class="covered" data-hits="82" data-linenumber="23">
-          <span class="hits">82</span>
+        <li class="covered" data-hits="124687" data-linenumber="23">
+          <span class="hits">124687</span>
           
           <code class="ruby">    key = @final_values.first</code>
         </li>
       
-        <li class="covered" data-hits="82" data-linenumber="24">
-          <span class="hits">82</span>
+        <li class="covered" data-hits="124687" data-linenumber="24">
+          <span class="hits">124687</span>
           
           <code class="ruby">    @final_values.rotate!</code>
         </li>
       
-        <li class="covered" data-hits="82" data-linenumber="25">
-          <span class="hits">82</span>
+        <li class="covered" data-hits="124687" data-linenumber="25">
+          <span class="hits">124687</span>
           
           <code class="ruby">    key</code>
         </li>
@@ -753,26 +831,26 @@
           <code class="ruby">    message.downcase.chars.map do |char|</code>
         </li>
       
-        <li class="covered" data-hits="45" data-linenumber="30">
-          <span class="hits">45</span>
+        <li class="covered" data-hits="60" data-linenumber="30">
+          <span class="hits">60</span>
           
           <code class="ruby">      next char unless @alphabet.include?(char)</code>
         </li>
       
-        <li class="covered" data-hits="44" data-linenumber="31">
-          <span class="hits">44</span>
+        <li class="covered" data-hits="59" data-linenumber="31">
+          <span class="hits">59</span>
           
           <code class="ruby">      @alphabet.rotate! until @alphabet.first == char</code>
         </li>
       
-        <li class="covered" data-hits="44" data-linenumber="32">
-          <span class="hits">44</span>
+        <li class="covered" data-hits="59" data-linenumber="32">
+          <span class="hits">59</span>
           
           <code class="ruby">      @alphabet.rotate!(current_key).first</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="33">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="33">
+          <span class="hits">5</span>
           
           <code class="ruby">    end.join</code>
         </li>
@@ -792,7 +870,7 @@
         <li class="covered" data-hits="1" data-linenumber="36">
           <span class="hits">1</span>
           
-          <code class="ruby"> def deshifter(message)</code>
+          <code class="ruby">  def deshifter(message)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="37">
@@ -801,26 +879,26 @@
           <code class="ruby">   message.downcase.chars.map do |char|</code>
         </li>
       
-        <li class="covered" data-hits="34" data-linenumber="38">
-          <span class="hits">34</span>
+        <li class="covered" data-hits="124624" data-linenumber="38">
+          <span class="hits">124624</span>
           
           <code class="ruby">     next char unless @alphabet.include?(char)</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="39">
-          <span class="hits">33</span>
+        <li class="covered" data-hits="124623" data-linenumber="39">
+          <span class="hits">124623</span>
           
           <code class="ruby">     @alphabet.rotate! until @alphabet.first == char</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="40">
-          <span class="hits">33</span>
+        <li class="covered" data-hits="124623" data-linenumber="40">
+          <span class="hits">124623</span>
           
           <code class="ruby">     @alphabet.rotate!(-current_key).first</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="41">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="8309" data-linenumber="41">
+          <span class="hits">8309</span>
           
           <code class="ruby">   end.join</code>
         </li>
@@ -828,7 +906,7 @@
         <li class="never" data-hits="" data-linenumber="42">
           
           
-          <code class="ruby"> end</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="43">
@@ -1196,7 +1274,7 @@
         <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
-          <code class="ruby">    assert_equal &quot;140419&quot;, offset.date</code>
+          <code class="ruby">    assert_equal &quot;150419&quot;, offset.date</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
@@ -1689,7 +1767,7 @@
         <li class="never" data-hits="" data-linenumber="54">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="55">

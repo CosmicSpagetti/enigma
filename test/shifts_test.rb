@@ -51,6 +51,6 @@ class ShiftsTest < Minitest::Test
     assert_equal 20, shifts.current_key
     assert_equal 3, shifts.current_key
   end
-
+  
 
 end
