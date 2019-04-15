@@ -8,7 +8,7 @@ message, where = ARGV
 messages = File.open(message, "r")
 encrypted = File.open(where, "w")
 
-encrypted_message = Enigma.new.encrypt(messages.read)
+encrypted_message = Enigma.new.encrypt(messages.read.chomp)
 encrypted.write(encrypted_message[:encryption])
 encrypted.close
 

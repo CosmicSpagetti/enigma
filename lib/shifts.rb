@@ -4,8 +4,8 @@ class Shifts
               :alphabet,
               :final_values
   def initialize(key = Key.new, date = Offset.new)
-    @key = key.class == String ? Key.new(key) : key
-    @date = date.class == String ? Offset.new(date) : date
+    @key_instance = key.class == String ? Key.new(key) : key
+    @date_instance = date.class == String ? Offset.new(date) : date
     @alphabet = ("a".."z").to_a << " "
     @final_values = final_shifts
   end
@@ -28,17 +28,14 @@ class Shifts
   def shifter(message)
     message.downcase.chars.map do |char|
       next char unless @alphabet.include?(char)
-      @alphabet.rotate! until @alphabet.first == char
-      @alphabet.rotate!(current_key).first
+      char.tr(@alphabet.to_s, @alphabet.rotate(current_key).to_s)
     end.join
   end
 
   def deshifter(message)
    message.downcase.chars.map do |char|
      next char unless @alphabet.include?(char)
-     @alphabet.rotate! until @alphabet.first == char
-     @alphabet.rotate!(-current_key).first
+     char.tr(@alphabet.to_s, @alphabet.rotate(-current_key).to_s)
    end.join
   end
-
 end
