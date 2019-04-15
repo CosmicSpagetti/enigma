@@ -9,7 +9,7 @@ encrypted_message = File.open(encrypted, "r")
 created = File.open(create, "w")
 
 encrypted_message = Enigma.new.decrypt(encrypted_message.read, key, date)
-created.write(encrypted_message[:encryption])
+created.write(encrypted_message[:decryption])
 created.close
 
 
