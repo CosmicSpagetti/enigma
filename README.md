@@ -1,2 +1,2 @@
-# Functionality 
-## Cracking method and command line interface successfully implemented
+## Functionality 
+Cracking method and command line interface successfully implemented
