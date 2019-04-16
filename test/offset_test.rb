@@ -17,7 +17,7 @@ class OffsetTest < Minitest::Test
   def test_can_get_todays_date_with_by_default
     offset = Offset.new
 
-    assert_equal "150419", offset.date
+    assert_equal Time.now.strftime("%d%m%y"), offset.date
   end
 
   def test_can_square_date_and_get_last_4_digits
