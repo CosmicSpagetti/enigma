@@ -34,7 +34,7 @@ class EnigmaTest < Minitest::Test
     expected = {
        encryption: "ojhavesdyq ",
        key: "02715",
-       date: "150419"
+       date: Time.now.strftime("%d%m%y")
      }
     assert_equal expected, enigma.encrypt("hello world", "02715")
   end
@@ -45,7 +45,7 @@ class EnigmaTest < Minitest::Test
     expected = {
        decryption: "hello world",
        key: "02715",
-       date: "150419"
+       date: Time.now.strftime("%d%m%y")
      }
     assert_equal expected, enigma.decrypt(encrypted[:encryption], "02715")
   end
@@ -53,6 +53,7 @@ class EnigmaTest < Minitest::Test
 
   def test_can_crack_encryptions
     enigma = Enigma.new
+    binding.pry
     enigma.encrypt("hello world end", "08304", "291018")
     expected = {
        decryption: "hello world end",
@@ -61,5 +62,17 @@ class EnigmaTest < Minitest::Test
      }
     assert_equal expected, enigma.crack("vjqtbeaweqihssi", "291018")
   end
+
+  # def test_can_crack_with_todays_date
+  #   enigma = Enigma.new
+  #   encrypted = enigma.encrypt("hello world end", "02715")
+  #   expected = {
+  #      decryption: "hello world end",
+  #      key: "08304",
+  #      date: "291018"
+  #    }
+  #   assert_equal , enigma.crack
+  #
+  # end
 
 end

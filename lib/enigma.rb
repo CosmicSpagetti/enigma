@@ -15,12 +15,12 @@ class Enigma
   end
 
   def crack(message, date = Offset.new)
-    key = 10000000
-    key_format = key.to_s[-5..-1]
+    key = 00000
+    key_format = key.to_s.rjust(5, "0")
     cracked_message = decrypt(message, key_format, date)
     until cracked_message[:decryption][-4..-1] == " end"
       key += 1
-      key_format = key.to_s[-5..-1]
+      key_format = key.to_s.rjust(5, "0")
       cracked_message = decrypt(message, key_format, date)
     end
     decrypt(message, key_format, date)

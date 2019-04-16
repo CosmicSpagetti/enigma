@@ -22,7 +22,7 @@ class ShiftsTest < Minitest::Test
 
     assert_instance_of Key, shifts.key_instance
     assert_instance_of Offset, shifts.date_instance
-    assert_equal "150419", shifts.date_instance.date
+    assert_equal Time.now.strftime("%d%m%y"), shifts.date_instance.date
   end
 
 
@@ -39,7 +39,6 @@ class ShiftsTest < Minitest::Test
 
   def test_can_decrypt_messages
     shifts = Shifts.new("02715", "040895")
-
     assert_equal "hello world!", shifts.deshifter("keder ohulw!")
   end
 
