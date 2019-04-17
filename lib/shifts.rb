@@ -27,14 +27,12 @@ class Shifts
 
   def shifter(message)
     message.downcase.chars.map do |char|
-      next char unless @alphabet.include?(char)
       char.tr(@alphabet.to_s, @alphabet.rotate(current_key).to_s)
     end.join
   end
 
   def deshifter(message)
    message.downcase.chars.map do |char|
-     next char unless @alphabet.include?(char)
      char.tr(@alphabet.to_s, @alphabet.rotate(-current_key).to_s)
    end.join
   end
