@@ -64,7 +64,6 @@ class EnigmaTest < Minitest::Test
 
   def test_can_crack_with_todays_date
     enigma = Enigma.new
-    encrypted = enigma.encrypt("hello world end", "02715")
     expected = {
        decryption: "hello world end",
        key: "02715",
